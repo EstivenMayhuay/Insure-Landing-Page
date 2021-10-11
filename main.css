@@ -7,7 +7,7 @@
 
 body {
   display: block;
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 }
 
@@ -55,6 +55,7 @@ body {
   align-items: center;
   width: 100%;
   height: var(--hMenu);
+  /*overflow: hidden;*/
 }
 
 .logo {
@@ -67,7 +68,31 @@ body {
 }
 
 .menu {
+  position: absolute;
+  top: var(--hMenu); right: 0;
   display: none;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  background: white;
+  gap: 16px;
+  padding: 16px;
+}
+
+.menu__item, .menu .btnPrimary {
+  list-style: none;
+  color: var(--dark-grayish-violet);
+  font-weight: 700;
+  font-family: var(--fontBody);
+  font-size: var(--button);
+}
+
+.menu .btnPrimary {
+  color: var(--dark-violet);
+  border: 2px solid var(--dark-violet);
+  padding: 8px 16px;
 }
 
 /* Main Content */
@@ -305,6 +330,17 @@ br {
 /* aditional class */
 .showMenu {
   display: flex;
+  animation: moveMenu .4s ease-in-out;
+}
+
+@keyframes moveMenu {
+  from {
+    right: -50%;
+  }
+
+  to {
+    right: 0;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -351,11 +387,14 @@ br {
 
   .menu {
     position: absolute;
-    right: 48px;
+    top: 20px; right: 48px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: center;
     gap: 36px;
+    width: auto;
+    padding: 0;
   }
 
   .menu__item, .menu > .btnPrimary {
