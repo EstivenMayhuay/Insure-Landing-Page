@@ -2,7 +2,7 @@
 
 This is a amazing landing page created by insure it's responsive.
 
-You can visit the site in the following link: [https://estivenm99.github.io/insure_landing_page/](https://estivenm99.github.io/insure_landing_page/)
+You can visit the site in the following link: [https://estivenmayhuay.github.io/Insure-Landing-Page/](https://estivenmayhuay.github.io/Insure-Landing-Page/)
 
 ## **Technologies**
 
